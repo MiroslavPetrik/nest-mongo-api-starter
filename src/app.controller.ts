@@ -1,0 +1,63 @@
+import {
+  Controller,
+  Get,
+  Post,
+  Req,
+  Param,
+  UseGuards,
+  Body,
+} from '@nestjs/common';
+import { AuthGuard } from '@nestjs/passport';
+import { Request } from 'express';
+
+import {
+  ActivateParams,
+  ForgottenPasswordDto,
+  ResetPasswordDto,
+  SignUpDto,
+} from './auth/auth.interface';
+import { AuthService } from './auth/auth.service';
+import { getOriginHeader } from './common/auth';
+
+@Controller('api')
+export class AppController {
+  constructor(private readonly authService: AuthService) {}
+
+  @Get('activate/:userId/:activationToken')
+  activate(@Param() params: ActivateParams) {
+    return this.authService.activate(params);
+  }
+
+  @UseGuards(AuthGuard('local'))
+  @Post('login')
+  login(@Req() req) {
+    return this.authService.login(req.user);
+  }
+
+  @Post('signup')
+  async signup(@Body() signUpDto: SignUpDto, @Req() req: Request) {
+    return await this.authService.signUpUser(signUpDto, getOriginHeader(req));
+  }
+
+  @UseGuards(AuthGuard())
+  @Get('me')
+  getProfile(@Req() req) {
+    return req.user;
+  }
+
+  @UseGuards(AuthGuard())
+  @Get('relogin')
+  relogin(@Req() req) {
+    return this.authService.login(req.user);
+  }
+
+  @Post('forgotten-password')
+  forgottenPassword(@Body() body: ForgottenPasswordDto, @Req() req: Request) {
+    return this.authService.forgottenPassword(body, getOriginHeader(req));
+  }
+
+  @Post('reset-password')
+  resetPassword(@Body() body: ResetPasswordDto) {
+    return this.authService.resetPassword(body);
+  }
+}
