@@ -8,6 +8,8 @@ import { UserModule } from '../user/user.module';
 import { AuthService } from './auth.service';
 import { LocalStrategy } from './local.strategy';
 import { JwtStrategy } from './jwt.strategy';
+import { AuthController } from './auth.controller';
+import setupSwagger from './auth.swagger';
 
 const passportModule = PassportModule.register({ defaultStrategy: 'jwt' });
 
@@ -21,6 +23,9 @@ const passportModule = PassportModule.register({ defaultStrategy: 'jwt' });
     }),
   ],
   providers: [AuthService, LocalStrategy, JwtStrategy],
+  controllers: [AuthController],
   exports: [AuthService, passportModule],
 })
 export class AuthModule {}
+
+setupSwagger(AuthModule);

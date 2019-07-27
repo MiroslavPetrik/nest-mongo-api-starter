@@ -5,6 +5,7 @@ import * as compression from 'compression';
 import { NestFactory } from '@nestjs/core';
 import { ValidationPipe } from '@nestjs/common';
 
+import { setupSwaggerDocuments } from './common/swagger';
 import { AppModule } from './app.module';
 import config from './config';
 
@@ -29,6 +30,8 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   configureApp(app);
+
+  setupSwaggerDocuments(app);
 
   await app.listen(process.env.PORT);
 }
