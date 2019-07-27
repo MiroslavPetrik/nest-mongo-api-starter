@@ -15,22 +15,26 @@ import {
   ForgottenPasswordDto,
   ResetPasswordDto,
   SignUpDto,
-} from './auth/auth.interface';
-import { AuthService } from './auth/auth.service';
-import { getOriginHeader } from './common/auth';
+  LoginDto,
+} from './auth.interface';
+import { AuthService } from './auth.service';
+import { getOriginHeader } from '../common/auth';
+import { ApiUseTags } from '@nestjs/swagger';
 
+@ApiUseTags('auth')
 @Controller('api')
-export class AppController {
+export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
   @Get('activate/:userId/:activationToken')
-  activate(@Param() params: ActivateParams) {
+  activate(@Param() params: ActivateParams, @Param('userId') userId) {
     return this.authService.activate(params);
   }
 
   @UseGuards(AuthGuard('local'))
   @Post('login')
-  login(@Req() req) {
+  login(@Req() req, @Body() loginDto: LoginDto) {
+    // TODO: remove loginDto, swagger should find it somehow by exploring the AuthGuard
     return this.authService.login(req.user);
   }
 

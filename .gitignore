@@ -37,4 +37,4 @@ lerna-debug.log*
 test/**/*.js
 
 # dotenv variables
-.env
+**/.env

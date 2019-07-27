@@ -7,7 +7,6 @@ import { MorganModule } from 'nest-morgan';
 
 import { LoggerMiddleware } from './common/middleware/logger.middleware';
 import { GlobalAccessLogger } from './common/accessLogger';
-import { AppController } from './app.controller';
 import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
 import config from './config';
@@ -23,8 +22,8 @@ const DEV_TRANSPORTER = {
 
 @Module({
   imports: [
-    MorganModule.forRoot(),
     AuthModule,
+    MorganModule.forRoot(),
     MongooseModule.forRoot(process.env.MONGO_URL, { useFindAndModify: false }),
     MailerModule.forRootAsync({
       useFactory: () => ({
@@ -37,7 +36,6 @@ const DEV_TRANSPORTER = {
     UserModule,
   ],
   providers: [GlobalAccessLogger],
-  controllers: [AppController],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
