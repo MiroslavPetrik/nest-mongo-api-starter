@@ -3,7 +3,7 @@ import { JwtService } from '@nestjs/jwt';
 
 import { comparePassword } from '../common/auth';
 import { UserService } from '../user/user.service';
-import { UserPublicData } from '../user/user.interface';
+import { User } from '../user/user.interface';
 import { LoginCredentialsException } from '../common/exceptions';
 
 import {
@@ -20,13 +20,13 @@ export class AuthService {
     private readonly jwtService: JwtService,
   ) {}
 
-  async validateUser(email: string, password: string): Promise<UserPublicData> {
+  async validateUser(email: string, password: string): Promise<User> {
     const user = await this.userService.findByEmail(email);
 
     if (!comparePassword(password, user.password)) {
       throw LoginCredentialsException();
     }
-    return user.getPublicData();
+    return user;
   }
 
   async activate({ userId, activationToken }: ActivateParams) {
@@ -38,10 +38,10 @@ export class AuthService {
     };
   }
 
-  async login(user: UserPublicData) {
+  async login(user: User) {
     return {
       token: this.jwtService.sign({}, { subject: `${user.id}` }),
-      user,
+      user: user.getPublicData(),
     };
   }
 
