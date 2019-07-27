@@ -35,7 +35,7 @@ const DEV_TRANSPORTER = {
     }),
     UserModule,
   ],
-  providers: [GlobalAccessLogger],
+  providers: config.isTest() ? undefined : [GlobalAccessLogger],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
@@ -44,6 +44,9 @@ export class AppModule implements NestModule {
       config.static,
     );
     consumer.apply(ServeStaticMiddleware).forRoutes('public');
-    consumer.apply(LoggerMiddleware).forRoutes('api');
+
+    if (!config.isTest()) {
+      consumer.apply(LoggerMiddleware).forRoutes('api');
+    }
   }
 }
