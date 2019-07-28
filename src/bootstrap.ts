@@ -1,4 +1,3 @@
-import * as dotenv from 'dotenv';
 import * as helmet from 'helmet';
 import * as compression from 'compression';
 import { NestFactory } from '@nestjs/core';
@@ -26,8 +25,6 @@ export const configureApp = (app: any) => {
 };
 
 export async function bootstrap() {
-  dotenv.config();
-
   const app = await NestFactory.create(AppModule);
 
   configureApp(app);
