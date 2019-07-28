@@ -22,6 +22,3 @@ UserSchema.methods.getPublicData = function() {
   const { id, email, isActive } = this;
   return { id, email, isActive };
 };
-
-// Required only for seeding data in tests
-export default mongoose.model('User', UserSchema);

@@ -40,7 +40,7 @@ export class AuthController {
 
   @Post('signup')
   async signup(@Body() signUpDto: SignUpDto, @Req() req: Request) {
-    return await this.authService.signUpUser(signUpDto, getOriginHeader(req));
+    return this.authService.signUpUser(signUpDto, getOriginHeader(req));
   }
 
   @UseGuards(AuthGuard())

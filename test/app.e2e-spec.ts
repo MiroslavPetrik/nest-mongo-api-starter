@@ -11,13 +11,11 @@ import { configureApp } from '../src/bootstrap';
 import seeder from './seeder';
 
 describe('AppController (e2e)', () => {
-  let app;
+  let app: any;
 
   beforeAll(async () => {
     await seeder.initialize();
-  });
 
-  beforeEach(async () => {
     const moduleFixture: TestingModule = await Test.createTestingModule({
       imports: [AppModule],
     }).compile();
@@ -95,7 +93,7 @@ describe('AppController (e2e)', () => {
         .expect(409);
     });
 
-    it('should succeed with status 200 and return user with token when valid data provided', async () => {
+    it('should succeed with status 201 and return user with token when valid data provided', async () => {
       const { status, body } = await request(app.getHttpServer())
         .post('/api/signup')
         .send({ email: 'email@email.com', password: 'password' });
@@ -107,7 +105,7 @@ describe('AppController (e2e)', () => {
   });
 
   describe('/api/me (GET)', () => {
-    let token;
+    let token: string;
 
     beforeAll(async () => {
       const { body } = await request(app.getHttpServer())
@@ -134,7 +132,7 @@ describe('AppController (e2e)', () => {
   });
 
   describe('/api/relogin (GET)', () => {
-    let token;
+    let token: string;
 
     beforeAll(async () => {
       const { body } = await request(app.getHttpServer())
