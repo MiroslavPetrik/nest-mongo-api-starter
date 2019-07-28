@@ -1,10 +1,12 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import * as request from 'supertest';
 import * as dotenv from 'dotenv';
-dotenv.config({ path: './.env' });
+import * as path from 'path';
+
+dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 import { AppModule } from './../src/app.module';
-import { configureApp } from '../src/main';
+import { configureApp } from '../src/bootstrap';
 
 import seeder from './seeder';
 
