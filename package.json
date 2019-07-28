@@ -16,10 +16,7 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "run-s --continue-on-error e2e:prepare e2e:run e2e:cleanup",
-    "e2e:prepare": "tsc **/**/*schema.ts --outDir './test/seeder'",
-    "e2e:run": "jest --detectOpenHandles --config  ./test/jest-e2e.json",
-    "e2e:cleanup": "rm test/seeder/*.js"
+    "test:e2e": "jest --detectOpenHandles --config  ./test/jest-e2e.json"
   },
   "dependencies": {
     "@nest-middlewares/serve-static": "^6.0.0",
