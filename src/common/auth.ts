@@ -4,7 +4,7 @@ import { Request } from 'express';
 export const hashPassword = async (password: string) =>
   await bcrypt.hash(
     password,
-    await bcrypt.genSalt(parseInt(process.env.AUTH_SALT_ROUNDS, 10)),
+    await bcrypt.genSalt(parseInt(process.env.AUTH_SALT_ROUNDS!, 10)),
   );
 
 export const comparePassword = (password: string, hash: string) =>

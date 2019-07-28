@@ -27,13 +27,13 @@ export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
   @Get('activate/:userId/:activationToken')
-  activate(@Param() params: ActivateParams, @Param('userId') userId) {
+  activate(@Param() params: ActivateParams, @Param('userId') userId: string) {
     return this.authService.activate(params);
   }
 
   @UseGuards(AuthGuard('local'))
   @Post('login')
-  login(@Req() req, @Body() loginDto: LoginDto) {
+  login(@Req() req: Request, @Body() loginDto: LoginDto) {
     // TODO: remove loginDto, swagger should find it somehow by exploring the AuthGuard
     return this.authService.login(req.user);
   }
@@ -45,13 +45,13 @@ export class AuthController {
 
   @UseGuards(AuthGuard())
   @Get('me')
-  getProfile(@Req() req) {
+  getProfile(@Req() req: Request) {
     return req.user;
   }
 
   @UseGuards(AuthGuard())
   @Get('relogin')
-  relogin(@Req() req) {
+  relogin(@Req() req: Request) {
     return this.authService.login(req.user);
   }
 

@@ -48,7 +48,13 @@ export class UserService {
   }
 
   async findById(id: string): Promise<User> {
-    return await this.userModel.findById(id);
+    const user = await this.userModel.findById(id);
+
+    if (!user) {
+      throw UserNotFoundException();
+    }
+
+    return user;
   }
 
   async findByEmail(email: string): Promise<User> {

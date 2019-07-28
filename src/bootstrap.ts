@@ -31,5 +31,5 @@ export async function bootstrap() {
 
   setupSwaggerDocuments(app);
 
-  await app.listen(process.env.PORT);
+  await app.listen(process.env.PORT!);
 }

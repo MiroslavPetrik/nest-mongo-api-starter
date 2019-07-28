@@ -1,7 +1,7 @@
-import * as seeder from 'mongoose-seed';
-
 import { hashPassword } from '../../src/common/auth';
 import config from '../../src/config';
+
+const seeder = require('mongoose-seed');
 
 export default {
   initialize: () =>
