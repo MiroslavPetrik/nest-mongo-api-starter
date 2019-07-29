@@ -46,3 +46,6 @@ For a concrete example see the `auth` feature.
 ## More
 
 This backend will play nicely with awesome [react-starter](https://github.com/Kamahl19/react-starter) create-react-app project written in Typescript!
+
+## License
+MIT
