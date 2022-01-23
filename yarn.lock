@@ -866,25 +866,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/passport-jwt@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "@types/passport-jwt@npm:3.0.1"
+"@types/passport-jwt@npm:3.0.6":
+  version: 3.0.6
+  resolution: "@types/passport-jwt@npm:3.0.6"
   dependencies:
     "@types/express": "*"
     "@types/jsonwebtoken": "*"
     "@types/passport-strategy": "*"
-  checksum: 41744ffbf8ee388ea8c90cc697760563c4ae9573dd5ba235aa1ab4a0918866ab4eb18b8e76b6c40ab2e60374de9703dddcb848b3f5b964449b12a0044e1a1b44
+  checksum: aa1e89b30bf77e1147bd5d47118fec38705246d6789b687d7385f037fdc01bed4d1e222e9d3c5c04e871c9a06474853090c17968434f9affefc53bed4dfad32b
   languageName: node
   linkType: hard
 
-"@types/passport-local@npm:^1.0.33":
-  version: 1.0.33
-  resolution: "@types/passport-local@npm:1.0.33"
+"@types/passport-local@npm:1.0.34":
+  version: 1.0.34
+  resolution: "@types/passport-local@npm:1.0.34"
   dependencies:
     "@types/express": "*"
     "@types/passport": "*"
     "@types/passport-strategy": "*"
-  checksum: c3a1834ec730261a09dbb4f4a5d70f12f3925c78f7b05ff7244c1352b038b4e555c8d93f236c6d29a23a7d92931ff397d90dfb1139193d131dee148ba71867fe
+  checksum: c8e162f571c8685344f4496b1473645eb1244a2ecb1c810854d43ac8897145083ac7412b8d3a3231f72f27a22d57e526fc8421d8208c18cdff8f83266e875f37
   languageName: node
   linkType: hard
 
@@ -5425,8 +5425,8 @@ __metadata:
     "@types/morgan": ^1.7.36
     "@types/node": 12.6.8
     "@types/nodemailer": ^6.2.1
-    "@types/passport-jwt": ^3.0.1
-    "@types/passport-local": ^1.0.33
+    "@types/passport-jwt": 3.0.6
+    "@types/passport-local": 1.0.34
     "@types/supertest": 2.0.8
     "@types/uuid": ^3.4.5
     bcryptjs: ^2.4.3
@@ -5445,9 +5445,9 @@ __metadata:
     nest-morgan: ^1.0.1
     nestjs: ^0.0.1
     npm-run-all: ^4.1.5
-    passport: ^0.4.0
-    passport-jwt: ^4.0.0
-    passport-local: ^1.0.0
+    passport: 0.5.2
+    passport-jwt: 4.0.0
+    passport-local: 1.0.0
     prettier: 1.18.2
     reflect-metadata: ^0.1.13
     rimraf: ^2.6.3
@@ -5976,7 +5976,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"passport-jwt@npm:^4.0.0":
+"passport-jwt@npm:4.0.0":
   version: 4.0.0
   resolution: "passport-jwt@npm:4.0.0"
   dependencies:
@@ -5986,7 +5986,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"passport-local@npm:^1.0.0":
+"passport-local@npm:1.0.0":
   version: 1.0.0
   resolution: "passport-local@npm:1.0.0"
   dependencies:
@@ -6002,13 +6002,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"passport@npm:^0.4.0":
-  version: 0.4.0
-  resolution: "passport@npm:0.4.0"
+"passport@npm:0.5.2":
+  version: 0.5.2
+  resolution: "passport@npm:0.5.2"
   dependencies:
     passport-strategy: 1.x.x
     pause: 0.0.1
-  checksum: c2f406bef58dc394cbaf21654b1f128a981e6879936c8e9fc9f4bfc0a8f5e06e120ada80e403ebb9d73e6f034bde08a78892a298403831cc613af79346a64f87
+  checksum: be17a64a069f412299dea342fea1f4c755aea66fcd71e9422c5e254be18b069a39b00d141e4c63fb852f1bfea6030e8e170593d7f0db5c197fddec781e9e8de4
   languageName: node
   linkType: hard
 
