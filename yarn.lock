@@ -950,12 +950,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/uuid@npm:^3.4.5":
-  version: 3.4.5
-  resolution: "@types/uuid@npm:3.4.5"
-  dependencies:
-    "@types/node": "*"
-  checksum: d2f69af324b2154c3d16c20f2fa1204bab4f012a1f9b9945ff296a332b08bc8c9bb3c8a173bfa9c4b65e3d79e593fc665dc906c876614a428b9772c867b7fa61
+"@types/uuid@npm:8.3.4":
+  version: 8.3.4
+  resolution: "@types/uuid@npm:8.3.4"
+  checksum: 6f11f3ff70f30210edaa8071422d405e9c1d4e53abbe50fdce365150d3c698fe7bbff65c1e71ae080cbfb8fded860dbb5e174da96fdbbdfcaa3fb3daa474d20f
   languageName: node
   linkType: hard
 
@@ -5428,7 +5426,7 @@ __metadata:
     "@types/passport-jwt": 3.0.6
     "@types/passport-local": 1.0.34
     "@types/supertest": 2.0.8
-    "@types/uuid": ^3.4.5
+    "@types/uuid": 8.3.4
     bcryptjs: ^2.4.3
     bunyan: ^1.8.12
     class-transformer: ^0.3.1
@@ -5461,7 +5459,7 @@ __metadata:
     tsconfig-paths: 3.8.0
     tslint: 5.18.0
     typescript: 4.5.5
-    uuid: ^3.3.2
+    uuid: 8.3.2
   languageName: unknown
   linkType: soft
 
