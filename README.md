@@ -2,6 +2,13 @@
 
 Full-featured starter for Typescript Node & Mongo Rest API server featuring NestJS!
 
+## Getting started
+
+1. Install packages with `yarn install`
+2. Create env file `cp .env.example .env`
+   1. Configure mongo db URL (e.g. one pointing to Mongo Atlas)
+3. Develop app `yarn start:dev` 
+
 ## What's Inside
 
 - [dotenv environment variables](https://github.com/motdotla/dotenv#readme)
@@ -41,7 +48,7 @@ Follow these steps to add new feature:
 3. Register feature module in `feature.module.ts` by calling the exported function from step 2.
 4. Access your document at `/docs/:featurePath`.
 
-For a concrete example see the `auth` feature.
+For a concrete example see the [auth](http://localhost:3001/docs/auth/) feature.
 
 ## More
 
