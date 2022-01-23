@@ -823,10 +823,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lodash@npm:^4.14.136":
-  version: 4.14.136
-  resolution: "@types/lodash@npm:4.14.136"
-  checksum: 08c17a29e4168468a2fcf35b369a81e41dd633a952a077ecb8a976c8326e9c7785022165c3abc68610cf3b81e05fe5d571177d570db8f8c71637bfc099c62acc
+"@types/lodash@npm:4.14.178":
+  version: 4.14.178
+  resolution: "@types/lodash@npm:4.14.178"
+  checksum: a69a04a60bfc5257c3130a554b4efa0c383f0141b7b3db8ab7cf07ad2a46ea085fce66d0242da41da7e5647b133d5dfb2c15add9cbed8d7fef955e4a1e5b3128
   languageName: node
   linkType: hard
 
@@ -5842,7 +5842,7 @@ __metadata:
     "@types/express": 4.17.0
     "@types/helmet": 4.0.0
     "@types/jest": 24.0.15
-    "@types/lodash": ^4.14.136
+    "@types/lodash": 4.14.178
     "@types/mongoose": 5.11.97
     "@types/morgan": 1.9.3
     "@types/node": 12.6.8
