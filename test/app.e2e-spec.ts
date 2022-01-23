@@ -5,7 +5,7 @@ import * as path from "path";
 
 dotenv.config({path: path.resolve(__dirname, ".env")});
 
-import {AppModule} from "./../src/app.module";
+import {AppModule} from "../src/app.module";
 import {configureApp} from "../src/bootstrap";
 
 import seeder from "./seeder";

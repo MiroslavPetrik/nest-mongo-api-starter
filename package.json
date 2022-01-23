@@ -11,7 +11,7 @@
     "start:dev": "tsc-watch -p tsconfig.build.json --onSuccess \"node dist/main.js\"",
     "start:debug": "tsc-watch -p tsconfig.build.json --onSuccess \"node --inspect-brk dist/main.js\"",
     "start:prod": "node dist/main.js",
-    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
@@ -70,6 +70,9 @@
     "@types/supertest": "2.0.8",
     "@types/uuid": "8.3.4",
     "@types/validator": "13.7.1",
+    "@typescript-eslint/eslint-plugin": "5.10.0",
+    "@typescript-eslint/parser": "5.10.0",
+    "eslint": "8.7.0",
     "jest": "24.8.0",
     "mongoose-seed-2": "^0.1.0",
     "npm-run-all": "^4.1.5",
@@ -80,7 +83,6 @@
     "ts-node": "8.3.0",
     "tsc-watch": "4.6.0",
     "tsconfig-paths": "3.8.0",
-    "tslint": "5.18.0",
     "typescript": "4.5.5"
   },
   "jest": {
