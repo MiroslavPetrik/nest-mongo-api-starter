@@ -1,4 +1,6 @@
-import { SwaggerBaseConfig, SwaggerModule } from '@nestjs/swagger';
+import { OpenAPIObject, SwaggerModule } from '@nestjs/swagger';
+
+type SwaggerBaseConfig = Omit<OpenAPIObject, 'paths'>;
 
 interface Document {
   path: string;
