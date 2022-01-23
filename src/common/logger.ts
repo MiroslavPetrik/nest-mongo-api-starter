@@ -1,16 +1,16 @@
-import * as bunyan from 'bunyan';
+import * as bunyan from "bunyan";
 
-import { createLogsDirectory } from './helpers';
+import {createLogsDirectory} from "./helpers";
 
 export default bunyan.createLogger({
-  name: 'logger',
+  name: "logger",
   streams: [
     {
       stream: process.stdout,
     },
     {
-      type: 'rotating-file',
-      path: createLogsDirectory() + '/logs.log',
+      type: "rotating-file",
+      path: createLogsDirectory() + "/logs.log",
     },
   ],
 });

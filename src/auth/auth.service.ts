@@ -1,17 +1,17 @@
-import { Injectable } from '@nestjs/common';
-import { JwtService } from '@nestjs/jwt';
+import {Injectable} from "@nestjs/common";
+import {JwtService} from "@nestjs/jwt";
 
-import { comparePassword } from '../common/auth';
-import { UserService } from '../user/user.service';
-import { User } from '../user/user.interface';
-import { LoginCredentialsException } from '../common/exceptions';
+import {comparePassword} from "../common/auth";
+import {UserService} from "../user/user.service";
+import {User} from "../user/user.interface";
+import {LoginCredentialsException} from "../common/exceptions";
 
 import {
   ActivateParams,
   ForgottenPasswordDto,
   ResetPasswordDto,
   SignUpDto,
-} from './auth.interface';
+} from "./auth.interface";
 
 @Injectable()
 export class AuthService {
@@ -29,18 +29,18 @@ export class AuthService {
     return user;
   }
 
-  async activate({ userId, activationToken }: ActivateParams) {
+  async activate({userId, activationToken}: ActivateParams) {
     const user = await this.userService.activate(userId, activationToken);
 
     return {
-      token: this.jwtService.sign({}, { subject: `${user.id}` }),
+      token: this.jwtService.sign({}, {subject: `${user.id}`}),
       user: user.getPublicData(),
     };
   }
 
   async login(user: User) {
     return {
-      token: this.jwtService.sign({}, { subject: `${user.id}` }),
+      token: this.jwtService.sign({}, {subject: `${user.id}`}),
       user: user.getPublicData(),
     };
   }
@@ -53,20 +53,16 @@ export class AuthService {
     );
 
     return {
-      token: this.jwtService.sign({}, { subject: `${user.id}` }),
+      token: this.jwtService.sign({}, {subject: `${user.id}`}),
       user: user.getPublicData(),
     };
   }
 
-  async forgottenPassword({ email }: ForgottenPasswordDto, origin: string) {
+  async forgottenPassword({email}: ForgottenPasswordDto, origin: string) {
     return await this.userService.forgottenPassword(email, origin);
   }
 
-  async resetPassword({
-    email,
-    passwordResetToken,
-    password,
-  }: ResetPasswordDto) {
+  async resetPassword({email, passwordResetToken, password}: ResetPasswordDto) {
     const user = await this.userService.resetPassword(
       email,
       passwordResetToken,
@@ -74,7 +70,7 @@ export class AuthService {
     );
 
     return {
-      token: this.jwtService.sign({}, { subject: `${user.id}` }),
+      token: this.jwtService.sign({}, {subject: `${user.id}`}),
       user: user.getPublicData(),
     };
   }

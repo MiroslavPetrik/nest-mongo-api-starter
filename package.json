@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "rimraf dist && tsc -p tsconfig.build.json",
-    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "format": "prettier --write src --ignore-unknown",
     "start": "ts-node -r tsconfig-paths/register src/main.ts",
     "start:dev": "tsc-watch -p tsconfig.build.json --onSuccess \"node dist/main.js\"",
     "start:debug": "tsc-watch -p tsconfig.build.json --onSuccess \"node --inspect-brk dist/main.js\"",
@@ -73,7 +73,7 @@
     "jest": "24.8.0",
     "mongoose-seed-2": "^0.1.0",
     "npm-run-all": "^4.1.5",
-    "prettier": "1.18.2",
+    "prettier": "2.5.1",
     "rimraf": "3.0.2",
     "supertest": "4.0.2",
     "ts-jest": "24.0.2",

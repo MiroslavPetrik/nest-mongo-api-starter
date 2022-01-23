@@ -5872,7 +5872,7 @@ __metadata:
     passport: 0.5.2
     passport-jwt: 4.0.0
     passport-local: 1.0.0
-    prettier: 1.18.2
+    prettier: 2.5.1
     reflect-metadata: ^0.1.13
     rimraf: 3.0.2
     rotating-file-stream: ^1.4.3
@@ -6632,12 +6632,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:1.18.2":
-  version: 1.18.2
-  resolution: "prettier@npm:1.18.2"
+"prettier@npm:2.5.1":
+  version: 2.5.1
+  resolution: "prettier@npm:2.5.1"
   bin:
-    prettier: ./bin-prettier.js
-  checksum: c716ef85a96ebbe066f825807d2a16f818f78feab07464eb8ad3434714fa42b774dc07f92b28d16597c6a9fcd1affaf918943b124f0bbaf121b5b36e96ab51eb
+    prettier: bin-prettier.js
+  checksum: 21b9408476ea1c544b0e45d51ceb94a84789ff92095abb710942d780c862d0daebdb29972d47f6b4d0f7ebbfb0ffbf56cc2cfa3e3e9d1cca54864af185b15b66
   languageName: node
   linkType: hard
 

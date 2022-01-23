@@ -1,11 +1,11 @@
-import helmet from 'helmet';
-import * as compression from 'compression';
-import { NestFactory } from '@nestjs/core';
-import { ValidationPipe } from '@nestjs/common';
+import helmet from "helmet";
+import * as compression from "compression";
+import {NestFactory} from "@nestjs/core";
+import {ValidationPipe} from "@nestjs/common";
 
-import { setupSwaggerDocuments } from './common/swagger';
-import { AppModule } from './app.module';
-import config from './config';
+import {setupSwaggerDocuments} from "./common/swagger";
+import {AppModule} from "./app.module";
+import config from "./config";
 
 /**
  * Helper to be used here & in tests.

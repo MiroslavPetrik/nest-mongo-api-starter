@@ -1,7 +1,7 @@
-import { Injectable } from '@nestjs/common';
-import { MailerService } from '@nest-modules/mailer';
+import {Injectable} from "@nestjs/common";
+import {MailerService} from "@nest-modules/mailer";
 
-import config from '../config';
+import config from "../config";
 
 @Injectable()
 export class UserMailerService {
@@ -17,7 +17,7 @@ export class UserMailerService {
       this.mailerService
         .sendMail({
           to: email,
-          subject: 'Activate your account',
+          subject: "Activate your account",
           text: `Please click on the following link, or paste this into your browser to activate your account:\n
 ${origin}/activate/${userId}/${activationToken}\n`,
         })
@@ -34,7 +34,7 @@ ${origin}/activate/${userId}/${activationToken}\n`,
       this.mailerService
         .sendMail({
           to,
-          subject: 'Reset your password',
+          subject: "Reset your password",
           text: `You are receiving this email because you (or someone else) have requested the reset of the password for your account.\n
 Please click on the following link, or paste this into your browser to complete the process:\n
 ${origin}/auth/reset-password/${passwordResetToken}\n
@@ -49,7 +49,7 @@ If you did not request this, please ignore this email and your password will rem
       this.mailerService
         .sendMail({
           to: email,
-          subject: 'Your password has been changed',
+          subject: "Your password has been changed",
           text: `Hello,\n\nThis is a confirmation that the password for your account ${email} has just been changed.\n`,
         })
         .catch();

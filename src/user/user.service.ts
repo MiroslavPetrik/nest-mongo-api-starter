@@ -1,24 +1,24 @@
-import { Model } from 'mongoose';
-import { v4 as uuid } from 'uuid';
-import { Injectable } from '@nestjs/common';
-import { InjectModel } from '@nestjs/mongoose';
+import {Model} from "mongoose";
+import {v4 as uuid} from "uuid";
+import {Injectable} from "@nestjs/common";
+import {InjectModel} from "@nestjs/mongoose";
 
-import config from '../config';
-import { hashPassword } from '../common/auth';
+import config from "../config";
+import {hashPassword} from "../common/auth";
 import {
   UserNotFoundException,
   EmailAlreadyUsedException,
   PasswordResetTokenInvalidException,
   ActivationTokenInvalidException,
-} from '../common/exceptions';
+} from "../common/exceptions";
 
-import { User } from './user.interface';
-import { UserMailerService } from './user.mailer.service';
+import {User} from "./user.interface";
+import {UserMailerService} from "./user.mailer.service";
 
 @Injectable()
 export class UserService {
   constructor(
-    @InjectModel('User') private readonly userModel: Model<User>,
+    @InjectModel("User") private readonly userModel: Model<User>,
     private readonly userMailer: UserMailerService,
   ) {}
   /**
@@ -59,8 +59,8 @@ export class UserService {
 
   async findByEmail(email: string): Promise<User> {
     const user = await this.userModel.findOne(
-      { email: email.toLowerCase() },
-      '+password',
+      {email: email.toLowerCase()},
+      "+password",
     );
 
     if (!user) {
@@ -88,7 +88,7 @@ export class UserService {
           runValidators: true,
         },
       )
-      .where('activationExpires')
+      .where("activationExpires")
       .gt(Date.now())
       .exec();
 
@@ -146,7 +146,7 @@ export class UserService {
           runValidators: true,
         },
       )
-      .where('passwordResetExpires')
+      .where("passwordResetExpires")
       .gt(Date.now())
       .exec();
 

@@ -1,5 +1,5 @@
-import * as bcrypt from 'bcryptjs';
-import { Request } from 'express';
+import * as bcrypt from "bcryptjs";
+import {Request} from "express";
 
 export const hashPassword = async (password: string) =>
   await bcrypt.hash(
@@ -10,9 +10,9 @@ export const hashPassword = async (password: string) =>
 export const comparePassword = (password: string, hash: string) =>
   bcrypt.compareSync(password, hash);
 
-export const getOriginHeader = ({ headers: { origin } }: Request): string => {
+export const getOriginHeader = ({headers: {origin}}: Request): string => {
   if (origin) {
-    return typeof origin === 'string' ? origin : origin[0];
+    return typeof origin === "string" ? origin : origin[0];
   }
-  return '';
+  return "";
 };
