@@ -1876,13 +1876,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"class-validator@npm:^0.9.1":
-  version: 0.9.1
-  resolution: "class-validator@npm:0.9.1"
+"class-validator@npm:0.13.2":
+  version: 0.13.2
+  resolution: "class-validator@npm:0.13.2"
   dependencies:
-    google-libphonenumber: ^3.1.6
-    validator: 10.4.0
-  checksum: 9b097aeb194ce6ddb8bc76f791f3aed0ea33e013710df5ced9af94c070480f2c3753d59a5a06d13de5c1e29c126cb086cab2bf21aaa3d57e0df137e4e52b1e52
+    libphonenumber-js: ^1.9.43
+    validator: ^13.7.0
+  checksum: 0deb4c29faa18345f6989fd7eaaaa07b05caae5298603fcd6485531c6daad503e5d2b24cc1342e4fc88ae5ba0acffdc24d0fc333110ef3f21a667cd8a79e1258
   languageName: node
   linkType: hard
 
@@ -3182,13 +3182,6 @@ __metadata:
   version: 11.12.0
   resolution: "globals@npm:11.12.0"
   checksum: 67051a45eca3db904aee189dfc7cd53c20c7d881679c93f6146ddd4c9f4ab2268e68a919df740d39c71f4445d2b38ee360fc234428baea1dbdfe68bbcb46979e
-  languageName: node
-  linkType: hard
-
-"google-libphonenumber@npm:^3.1.6":
-  version: 3.2.3
-  resolution: "google-libphonenumber@npm:3.2.3"
-  checksum: 6932f8c61a72db64f2060fdf74fdea03000bbb8918ad845b7c6a2efb0a2324540e555b59b5cc6be67715c0e78ca2245d90085370f0c1ab8f4409379342c7a2be
   languageName: node
   linkType: hard
 
@@ -4652,6 +4645,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"libphonenumber-js@npm:^1.9.43":
+  version: 1.9.44
+  resolution: "libphonenumber-js@npm:1.9.44"
+  checksum: cac1f8c4d37a35f1763720d5dbd247ce70a2f7a7d045ab2c99d75bdd170ed00ea8a38ddbd68b481fee3f57b9292218e412a20aa8a2a9b871091ed93809f61f95
+  languageName: node
+  linkType: hard
+
 "load-json-file@npm:^4.0.0":
   version: 4.0.0
   resolution: "load-json-file@npm:4.0.0"
@@ -5430,7 +5430,7 @@ __metadata:
     bcryptjs: 2.4.3
     bunyan: 1.8.15
     class-transformer: ^0.3.1
-    class-validator: ^0.9.1
+    class-validator: 0.13.2
     compression: ^1.7.4
     dotenv: ^8.0.0
     helmet: ^3.20.0
@@ -8113,10 +8113,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"validator@npm:10.4.0":
-  version: 10.4.0
-  resolution: "validator@npm:10.4.0"
-  checksum: 20b342c7c81ded126ae827df9c25e464dfcbb8909009ac4774e4a7c6175350ee5c1c49945cdf0b587bf83a01c63e83c16d1d3b238bf6c6f631c444b214ed5524
+"validator@npm:^13.7.0":
+  version: 13.7.0
+  resolution: "validator@npm:13.7.0"
+  checksum: 2b83283de1222ca549a7ef57f46e8d49c6669213348db78b7045bce36a3b5843ff1e9f709ebf74574e06223461ee1f264f8cc9a26a0060a79a27de079d8286ef
   languageName: node
   linkType: hard
 
