@@ -957,6 +957,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/validator@npm:13.7.1":
+  version: 13.7.1
+  resolution: "@types/validator@npm:13.7.1"
+  checksum: 810649a23bc46928c85d933be73b106bacb651a412c4172e30a70e84c63cada595d391042274b16e1c05b391af3a4f157b360890fbc5462ee347275222d59b64
+  languageName: node
+  linkType: hard
+
 "@types/webidl-conversions@npm:*":
   version: 6.1.1
   resolution: "@types/webidl-conversions@npm:6.1.1"
@@ -1857,10 +1864,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"class-transformer@npm:^0.3.1":
-  version: 0.3.1
-  resolution: "class-transformer@npm:0.3.1"
-  checksum: 3a3f7a92cbfd6e7fb5904f9a350bbca8b1e04954dc1f75b39eba949775ecb8bcdf96223e2ca563ec67155e38bdf6d6616ad6b989f8b1ffe377cda3300f5b719a
+"class-transformer@npm:0.5.1":
+  version: 0.5.1
+  resolution: "class-transformer@npm:0.5.1"
+  checksum: f191c8b4cc4239990f5efdd790cabdd852c243ed66248e39f6616a349c910c6eed2d9fd1fbf7ee6ea89f69b4f1d0b493b27347fe0cd0ae26b47c3745a805b6d3
   languageName: node
   linkType: hard
 
@@ -5427,9 +5434,10 @@ __metadata:
     "@types/passport-local": 1.0.34
     "@types/supertest": 2.0.8
     "@types/uuid": 8.3.4
+    "@types/validator": 13.7.1
     bcryptjs: 2.4.3
     bunyan: 1.8.15
-    class-transformer: ^0.3.1
+    class-transformer: 0.5.1
     class-validator: 0.13.2
     compression: ^1.7.4
     dotenv: ^8.0.0
