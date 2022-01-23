@@ -17,6 +17,9 @@ Full-featured starter for Typescript Node & Mongo Rest API server featuring Nest
 - [Validation with class-validator](https://docs.nestjs.com/techniques/validation)
 - [Mailer](https://github.com/nest-modules/mailer)
 - [Serve-static middleware](https://www.npmjs.com/package/@nest-middlewares/serve-static)
+  - example files
+    - [http://localhost:3001/public/swagger.png](http://localhost:3001/public/swagger.png)
+    - [http://localhost:3001/public/tests.png](http://localhost:3001/public/tests.png)
 - [Compression](https://docs.nestjs.com/techniques/compression)
 - [Security with helmet](https://docs.nestjs.com/techniques/security)
 - [Logging middleware (Bunyan)](https://docs.nestjs.com/techniques/logger)
