@@ -24,11 +24,7 @@ const DEV_TRANSPORTER = {
   imports: [
     AuthModule,
     MorganModule.forRoot(),
-    MongooseModule.forRoot(process.env.MONGO_URL!, {
-      useFindAndModify: false,
-      useNewUrlParser: true,
-      useCreateIndex: true,
-    }),
+    MongooseModule.forRoot(process.env.MONGO_URL!),
     MailerModule.forRootAsync({
       useFactory: () => ({
         transport: process.env.MAILGUN_TRANSPORT || DEV_TRANSPORTER,
