@@ -654,7 +654,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/bcryptjs@npm:^2.4.2":
+"@types/bcryptjs@npm:2.4.2":
   version: 2.4.2
   resolution: "@types/bcryptjs@npm:2.4.2"
   checksum: 220dade7b0312b41e23ccfb15f2ddde7804eb3c7ef41db41a6c49054be1e19a15eb3dd8c8ef196494f0866307cce22ad6f3f272941387124707d81dc66155bbc
@@ -671,12 +671,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/bunyan@npm:^1.8.6":
-  version: 1.8.6
-  resolution: "@types/bunyan@npm:1.8.6"
+"@types/bunyan@npm:1.8.8":
+  version: 1.8.8
+  resolution: "@types/bunyan@npm:1.8.8"
   dependencies:
     "@types/node": "*"
-  checksum: bcb2060ce59fc1d1bc9b79041ba9975f47e3932adc196d76ab378429c9db791d143e48c173a41ba6cb4713acee7ed315420050723a9996e1e92286641c43db4a
+  checksum: b28966c13579b281ae75560d8c99ee4149348818cd4c4d6424afeee9fdab1039db2a0c06f1ab62fbf8c71f99dcebb70551bb45f2110d6a1fc3e3f891355b6b4b
   languageName: node
   linkType: hard
 
@@ -1514,7 +1514,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bcryptjs@npm:^2.4.3":
+"bcryptjs@npm:2.4.3":
   version: 2.4.3
   resolution: "bcryptjs@npm:2.4.3"
   checksum: 0e80ed852a41f5dfb1853f53ee14a7390b0ef263ce05dba6e2ef3cd919dfad025a7c21ebcfe5bc7fa04b100990edf90c7a877ff7fe623d3e479753253131b629
@@ -1655,12 +1655,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bunyan@npm:^1.8.12":
-  version: 1.8.12
-  resolution: "bunyan@npm:1.8.12"
+"bunyan@npm:1.8.15":
+  version: 1.8.15
+  resolution: "bunyan@npm:1.8.15"
   dependencies:
     dtrace-provider: ~0.8
-    moment: ^2.10.6
+    moment: ^2.19.3
     mv: ~2
     safe-json-stringify: ~1
   dependenciesMeta:
@@ -1673,8 +1673,8 @@ __metadata:
     safe-json-stringify:
       optional: true
   bin:
-    bunyan: ./bin/bunyan
-  checksum: 297938277071312a994b78998aab274269270e231f5f0bd3e376db4f5937c3252d82afbf842ba19070bd31828628068344689e9e1e0cc0b3461e4916dd433577
+    bunyan: bin/bunyan
+  checksum: a479e0787c3a0b6565b54bd15f0b6c729d624c5aba53523e140e49e279b7a78508df93000e758bf6d02361117d6b4e6e5fc1d5ece05366fb6c4ba41bf1ac7d52
   languageName: node
   linkType: hard
 
@@ -5114,10 +5114,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"moment@npm:^2.10.6":
-  version: 2.24.0
-  resolution: "moment@npm:2.24.0"
-  checksum: 9cd93a251a2b33cb1b532eade0e496a2a7547faa6cfe37a283ee7bf69e202cd7c8ab0673d66883b5b29aed051353176dc0e6684f04073a75b0a155c500be1580
+"moment@npm:^2.19.3":
+  version: 2.29.1
+  resolution: "moment@npm:2.29.1"
+  checksum: 1e14d5f422a2687996be11dd2d50c8de3bd577c4a4ca79ba5d02c397242a933e5b941655de6c8cb90ac18f01cc4127e55b4a12ae3c527a6c0a274e455979345e
   languageName: node
   linkType: hard
 
@@ -5411,8 +5411,8 @@ __metadata:
     "@nestjs/platform-express": 8.2.6
     "@nestjs/swagger": 5.1.5
     "@nestjs/testing": 8.2.6
-    "@types/bcryptjs": ^2.4.2
-    "@types/bunyan": ^1.8.6
+    "@types/bcryptjs": 2.4.2
+    "@types/bunyan": 1.8.8
     "@types/compression": ^0.0.36
     "@types/dotenv": ^6.1.1
     "@types/express": 4.17.0
@@ -5427,8 +5427,8 @@ __metadata:
     "@types/passport-local": 1.0.34
     "@types/supertest": 2.0.8
     "@types/uuid": 8.3.4
-    bcryptjs: ^2.4.3
-    bunyan: ^1.8.12
+    bcryptjs: 2.4.3
+    bunyan: 1.8.15
     class-transformer: ^0.3.1
     class-validator: ^0.9.1
     compression: ^1.7.4
