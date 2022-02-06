@@ -1796,7 +1796,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"basic-auth@npm:~2.0.0, basic-auth@npm:~2.0.1":
+"basic-auth@npm:~2.0.1":
   version: 2.0.1
   resolution: "basic-auth@npm:2.0.1"
   dependencies:
@@ -6241,7 +6241,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"morgan@npm:1.10.0":
+"morgan@npm:1.10.0, morgan@npm:^1.10.0":
   version: 1.10.0
   resolution: "morgan@npm:1.10.0"
   dependencies:
@@ -6251,19 +6251,6 @@ __metadata:
     on-finished: ~2.3.0
     on-headers: ~1.0.2
   checksum: fb41e226ab5a1abf7e8909e486b387076534716d60207e361acfb5df78b84d703a7b7ea58f3046a9fd0b83d3c94bfabde32323341a1f1b26ce50680abd2ea5dd
-  languageName: node
-  linkType: hard
-
-"morgan@npm:^1.9.1":
-  version: 1.9.1
-  resolution: "morgan@npm:1.9.1"
-  dependencies:
-    basic-auth: ~2.0.0
-    debug: 2.6.9
-    depd: ~1.1.2
-    on-finished: ~2.3.0
-    on-headers: ~1.0.1
-  checksum: 69584328686c2cb2b7b8e69000cdf8f4d02218b6539870dae9266239506a9f1cd212635441899d6c446716462976bdd594251b598ba5cb494ef65420aff1399a
   languageName: node
   linkType: hard
 
@@ -6485,7 +6472,7 @@ __metadata:
     mongoose-seed-2: ^0.1.0
     morgan: 1.10.0
     nest: ^0.1.6
-    nest-morgan: ^1.0.1
+    nest-morgan: 2.0.0
     nestjs: ^0.0.1
     nodemailer: 6.7.2
     npm-run-all: ^4.1.5
@@ -6508,12 +6495,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"nest-morgan@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "nest-morgan@npm:1.0.1"
+"nest-morgan@npm:2.0.0":
+  version: 2.0.0
+  resolution: "nest-morgan@npm:2.0.0"
   dependencies:
-    morgan: ^1.9.1
-  checksum: 25ddd19257471e5f92b022584c0a3edd1cfc1be10f86e28b145974850f73f7e384fc800368edc3ab42800a7cbcce849ce22280d4eebd96d4f58d1694ffbb424a
+    morgan: ^1.10.0
+  checksum: 844125488c9e64987738dcaadec8df9338e975fa65ae1fefe7a007442624ef3eea72d6856237bab3bf7b22bfab3e95dc2f2444af34d61851f1ba6c869510d2c4
   languageName: node
   linkType: hard
 
@@ -6861,7 +6848,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"on-headers@npm:~1.0.1, on-headers@npm:~1.0.2":
+"on-headers@npm:~1.0.2":
   version: 1.0.2
   resolution: "on-headers@npm:1.0.2"
   checksum: 2bf13467215d1e540a62a75021e8b318a6cfc5d4fc53af8e8f84ad98dbcea02d506c6d24180cd62e1d769c44721ba542f3154effc1f7579a8288c9f7873ed8e5

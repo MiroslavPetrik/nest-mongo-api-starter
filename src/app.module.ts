@@ -23,7 +23,7 @@ const DEV_TRANSPORTER = {
 @Module({
   imports: [
     AuthModule,
-    MorganModule.forRoot(),
+    MorganModule,
     MongooseModule.forRoot(process.env.MONGO_URL!),
     MailerModule.forRootAsync({
       useFactory: () => ({

@@ -39,7 +39,7 @@
     "mongoose": "6.1.7",
     "morgan": "1.10.0",
     "nest": "^0.1.6",
-    "nest-morgan": "^1.0.1",
+    "nest-morgan": "2.0.0",
     "nestjs": "^0.0.1",
     "nodemailer": "6.7.2",
     "passport": "0.5.2",
