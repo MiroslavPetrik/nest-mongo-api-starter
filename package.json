@@ -5,6 +5,7 @@
   "author": "Miroslav Petrik",
   "license": "MIT",
   "scripts": {
+    "clean": "rimraf dist logs",
     "build": "rimraf dist && tsc -p tsconfig.build.json",
     "format": "prettier --write src test --ignore-unknown",
     "start": "ts-node -r tsconfig-paths/register src/main.ts",
