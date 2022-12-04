@@ -37,7 +37,7 @@
     "dotenv": "14.2.0",
     "helmet": "5.0.2",
     "lodash": "4.17.21",
-    "mongoose": "6.1.7",
+    "mongoose": "6.4.6",
     "morgan": "1.10.0",
     "nest": "^0.1.6",
     "nest-morgan": "2.0.0",
